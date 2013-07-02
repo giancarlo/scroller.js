@@ -60,8 +60,8 @@ var
 		if (config.delay === undefined)
 			config.delay = window.scrollTo.delay;
 
-		config.sx = window.scrollLeft || window.scrollX;
-		config.sy = window.scrollTop || window.scrollY;
+		config.sx = window.pageXOffset || window.scrollX;
+		config.sy = window.pageYOffset || window.scrollY;
 
 		if (config.el)
 		{
