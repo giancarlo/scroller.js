@@ -17,7 +17,7 @@ You can also use it manually like this:
 	scrollTo(x, y, [delay]);
 	scrollTo(dom_element, [delay]);
 	
-scroller.js is pure HTML5 code, it does not require any other libraries to use
-it in your site, add a script tag like this:
+scroller.js is pure HTML5 code, it does not require any other libraries. To use
+it in your site, add a script tag:
 
 	<script src="scroller.js"></script>
