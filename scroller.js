@@ -69,8 +69,8 @@ var
 
 		config.sx = window.scrollX;
 		config.sy = window.scrollY;
-		config.dx = (config.x - window.scrollX);
-		config.dy = (config.y - window.scrollY);
+		config.x = config.rect.left + (window.scrollLeft || window.scrollX);
+		config.y = config.rect.top + (window.scrollTop || window.scrollY);
 		config.start = Date.now();
 
 		if (!current)
