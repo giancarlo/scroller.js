@@ -2,7 +2,7 @@ scroller.js
 ===========
 
 Automatically adds support for smooth scrolling. It will replace the scrollTo
-function and bind itself to all local <a> elements.
+function and bind itself to all local A elements.
 
 To specify the easing function use:
 
