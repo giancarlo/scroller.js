@@ -10,7 +10,10 @@ var
 	links = window.document.getElementsByTagName('A'),
 	i = links.length,
 	href,
-	el
+	el,
+
+	requestAnimationFrame = window.requestAnimationFrame ||
+		window.mozRequestAnimationFrame
 ;
 
 	function on_click()
@@ -43,8 +46,8 @@ var
 			current.sy + current.dy * window.scrollTo.easing(t)
 		);
 
-		if (t < current.delay)
-			window.requestAnimationFrame(do_scroll);
+		if (t < 1)
+			requestAnimationFrame(do_scroll);
 		else
 			current = undefined;
 	}
@@ -68,7 +71,7 @@ var
 		config.start = Date.now();
 
 		if (!current)
-			window.requestAnimationFrame(do_scroll);
+			requestAnimationFrame(do_scroll);
 
 		current = config;
 	}
