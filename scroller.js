@@ -13,7 +13,10 @@ var
 	el,
 
 	requestAnimationFrame = window.requestAnimationFrame ||
-		window.mozRequestAnimationFrame
+		window.mozRequestAnimationFrame ||
+		(function (fn) {
+			setTimeout(fn, 30);
+		})
 ;
 
 	function on_click()
