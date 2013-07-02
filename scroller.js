@@ -60,17 +60,18 @@ var
 		if (config.delay === undefined)
 			config.delay = window.scrollTo.delay;
 
+		config.sx = window.scrollLeft || window.scrollX;
+		config.sy = window.scrollTop || window.scrollY;
+
 		if (config.el)
 		{
 			config.rect = config.el.getBoundingClientRect();
-			config.x = config.rect.left + window.scrollX;
-			config.y = config.rect.top + window.scrollY;
+			config.x = config.rect.left + config.sx;
+			config.y = config.rect.top + config.sy;
 		}
 
-		config.sx = window.scrollX;
-		config.sy = window.scrollY;
-		config.x = config.rect.left + (window.scrollLeft || window.scrollX);
-		config.y = config.rect.top + (window.scrollTop || window.scrollY);
+		config.dx = (config.x - config.sx);
+		config.dy = (config.y - config.sy);
 		config.start = Date.now();
 
 		if (!current)
