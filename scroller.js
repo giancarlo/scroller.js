@@ -25,15 +25,18 @@ var
 		return false;
 	}
 
-	while (i--)
+	function init()
 	{
-		el = links[i];
-		href = el.getAttribute('href');
-
-		if (href && href[0] === '#')
+		while (i--)
 		{
-			el._el = document.getElementsByName(el.hash.substr(1))[0];
-			el.addEventListener('click', on_click);
+			el = links[i];
+			href = el.getAttribute('href');
+
+			if (href && href[0] === '#')
+			{
+				el._el = document.getElementsByName(el.hash.substr(1))[0];
+				el.addEventListener('click', on_click);
+			}
 		}
 	}
 
@@ -139,5 +142,7 @@ var
 
 window.scrollTo.easing = window.scrollTo.Easing.Linear;
 window.scrollTo.delay = 250;
+
+window.addEventListener('load', init);
 
 })(this);
