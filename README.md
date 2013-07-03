@@ -8,6 +8,8 @@ To specify the easing function use:
 
 	scrollTo.easing = scrollTo.Easing.Linear;
 
+See the scrollTo.Easing object for more easing functions.
+
 To specify the default delay use:
 
 	scrollTo.delay = 500;
@@ -21,3 +23,9 @@ scroller.js is pure HTML5 code, it does not require any other libraries. To use
 it in your site, add a script tag:
 
 	<script src="scroller.js"></script>
+
+Tested with 
+
+Chrome 
+Firefox 21
+IE 9
