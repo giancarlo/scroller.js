@@ -32,7 +32,7 @@ var
 			el = links[i];
 			href = el.getAttribute('href');
 
-			if (href && href[0] === '#')
+			if (href && href[0] === '#' && href.length > 1)
 			{
 				el._el = document.getElementsByName(el.hash.substr(1))[0];
 				el.addEventListener('click', on_click);
