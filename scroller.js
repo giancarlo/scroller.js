@@ -8,7 +8,7 @@ var
 	_scrollTo = window.scrollTo,
 
 	links = window.document.getElementsByTagName('A'),
-	i = links.length,
+	i,
 	href,
 	el,
 
@@ -27,6 +27,8 @@ var
 
 	function init()
 	{
+		i = links.length;
+
 		while (i--)
 		{
 			el = links[i];
